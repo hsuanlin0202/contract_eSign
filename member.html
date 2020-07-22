@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html style="height: 100%; min-height: 100% !important;">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>ＯＯ公司</title>
+  </head>
+
+  <body class="fx fx_center" style="height: 100%; min-height: 100% !important;">
+    <div class="membox fx fx_wrap fx_jcenter">
+      <div class="mem_title">
+        <p>客戶查詢</p>
+        <p style="font-size: 14px; margin: 10px;">
+          擇一或多輸入客戶資料進行查詢
+        </p>
+      </div>
+      <div class="search_box fx fx_wrap">
+        <div class="search_input fx fx_wrap">
+          <p>身分證字號/統一編號</p>
+          <input
+            type="text"
+            id="userid"
+            class="input ser_input"
+            placeholder="請輸入客戶身分證字號/統一編號"
+            oninput="ontype();"
+          />
+        </div>
+        <div class="search_input fx fx_wrap">
+          <p>客戶名稱</p>
+          <input
+            type="password"
+            id="userpw"
+            class="input ser_input"
+            placeholder="請輸入客戶全名"
+            oninput="ontype();"
+          />
+        </div>
+        <div class="search_input fx fx_wrap">
+          <p>行動電話</p>
+          <input
+            type="password"
+            id="userphone"
+            class="input ser_input"
+            placeholder="請輸入客戶行動電話"
+            oninput="ontype();"
+          />
+        </div>
+      </div>
+      <div id="search" class="btn able">查詢</div>
+
+      <div
+        class="ser_result fx fx_wrap fx_jcenter"
+        style="margin: 20px auto;"
+        id="search_result"
+      >
+        <div class="mem_title" style="margin-bottom: 20px;">查詢結果</div>
+        <div class="re_table">
+          <table>
+            <tr class="fx fx_nowrap first_tr">
+              <td style="width: 25%;">序號</td>
+              <td>客戶代號</td>
+              <td>客戶名稱</td>
+              <td>行動電話</td>
+              <td style="width: 40%;">功能</td>
+            </tr>
+            <tr class="fx fx_nowrap fx_center">
+              <td style="width: 25%;">1</td>
+              <td>O100111111</td>
+              <td>Asabulu</td>
+              <td>0987778887</td>
+              <td style="width: 40%;">
+                <img
+                  src="img/ic_edit.svg"
+                  height="35px"
+                  onclick="location.href='signature.html'"
+                />
+              </td>
+            </tr>
+            <tr class="fx fx_nowrap fx_center">
+              <td style="width: 25%;">1</td>
+              <td>O100111111</td>
+              <td>Asabulu</td>
+              <td>0987778887</td>
+              <td style="width: 40%;">
+                <img
+                  src="img/ic_edit.svg"
+                  height="35px"
+                  onclick="location.href='signature.html'"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#search_result").hide();
+
+        $("#search").click(function () {
+          if (
+            $("#userid").val().length != 0 ||
+            $("#userpw").val().length != 0
+          ) {
+            $("#search_result").show();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

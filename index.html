@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html style="height: 100%; min-height: 100% !important;">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>ＯＯ公司</title>
+  </head>
+
+  <body class="fx fx_center" style="height: 100%; min-height: 100% !important;">
+    <div class="loginbox fx fx_end">
+      <div class="input_con">
+        <div class="log_title">OOXX登入</div>
+        <div class="inputbox fx fx_nowrap" id="user_box">
+          <div class="input_icon fx fx_center">
+            <img src="img/ic_user.svg" width="28px" />
+          </div>
+          <input
+            type="text"
+            id="userid"
+            class="input id_input"
+            placeholder="請輸入帳號"
+            oninput="ontype();"
+          />
+        </div>
+        <div class="inputbox fx fx_nowrap" id="pw_box">
+          <div class="input_icon fx fx_center">
+            <img src="img/ic_key.svg" width="28px" />
+          </div>
+          <input
+            type="password"
+            id="userpw"
+            class="input id_input"
+            placeholder="請輸入密碼"
+            oninput="ontype();"
+          />
+        </div>
+        <div id="error">使用者帳號或密碼錯誤，請重新輸入</div>
+        <div
+          class="inputbox fx fx_nowrap"
+          id="username_box"
+          style="background: white;"
+        >
+          <div class="input_icon fx fx_center">
+            <img src="img/ic_user.svg" width="28px" />
+          </div>
+          <label id="userid_show">使用者名稱</label>
+        </div>
+        <div class="inputbox fx fx_nowrap" id="branch_box">
+          <div class="input_icon fx fx_center">
+            <img src="img/ic_branch.svg" width="28px" />
+          </div>
+          <select name="branch" id="branch" class="input id_input">
+            <option value="0">請選擇站所</option>
+            <option value="Taipei">台北</option>
+          </select>
+        </div>
+
+        <div id="login" class="btn disable">登入</div>
+      </div>
+    </div>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
